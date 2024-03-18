@@ -1,5 +1,5 @@
 const config = {
-  gDriveApikey: "AIzaSyAHIDPKFSVbDwk-NdlAW8n3uh2q6AJkyAA",
+  gDriveApikey: "gdrive_api_key",
   poster: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhE0YYTCJ7b7DZncRo4lGnukDt0WiH76h5VeB6va8gqQ61U4HTWiUgGYiQAi57p8byp_lUDNcgy5OZKP8afZdWulPM7pJW4lLGftXRnYVHSIXWNoG9hLxryNFa2SdLJRNhV-XVjP1rPq182He4hkuacL-K_hqCppvOLLhZiV0wXRLuebBnlkkw-ZC0-/s720/1163369.jpg",
   license: "0070006c0061007900650072002d0074006f006f006c0073002e0062006c006f006700730070006f0074002e0063006f006d",
   ads: {
