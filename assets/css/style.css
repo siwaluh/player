@@ -262,6 +262,25 @@ textarea {
   transition: opacity .3s ease-in;
 }
 
+.logo-custom {
+  position: absolute;
+  z-index: 999;
+  max-width: 130px;
+  right: 0;
+  padding: 10px;
+  color: red;
+}
+
+.logo-custom img {
+  width: 100%;
+  height: auto;
+}
+
+.logo-custom svg {
+  width: auto;
+  max-height: 30px;
+}
+
 @media only screen and (max-width:980px) {
   .box_item_ads_popup img {
     max-width: 300px;

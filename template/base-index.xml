@@ -8,70 +8,72 @@
 </head>
 
 <body itemscope='itemscope' itemtype='https://schema.org/WebPage'>
-  <b:if cond='data:view.isHomepage'>
+  <b:if cond='data:view.url == data:view.url path "/p/create-stream.html" or data:view.url == data:view.url path "/p/watch.html"'>
     <!--Stream Files-->
     <style>/*<![CDATA[*/
       body{margin:0;padding:0}*,:after,:before{box-sizing:border-box}html{overflow-y:scroll}body{font-family:'Titillium Web',sans-serif}a{text-decoration:none;color:#1ab188;transition:.5s ease}a:hover{color:#179b77}#createIframe,.hidden{display:none}#arsipin,#fluid_video_wrapper_video,body>.plyr{position:absolute;width:100%!important;height:100%!important}.jw-button-color:hover,.jw-open,.jw-progress,.jw-toggle,.jw-toggle:hover{color:#008fee!important}.jw-active-option{background-color:#008fee!important}.jw-progress{background:#008fee!important}.jw-skin-seven .jw-toggle.jw-off{color:#fff!important}.form{background:rgba(19,35,47,.9);padding:40px;max-width:600px;margin:40px auto;border-radius:4px;box-shadow:0 4px 10px 4px rgba(19,35,47,.3)}.tab-group{list-style:none;padding:0;margin:0 0 40px 0}.tab-group:after{content:"";display:table;clear:both}.tab-group li a{display:block;text-decoration:none;padding:15px;background:rgba(160,179,176,.25);color:#a0b3b0;font-size:20px;float:left;width:50%;text-align:center;cursor:pointer;transition:.5s ease}.tab-group li a:hover{background:#179b77;color:#fff}.tab-group .active a{background:#1ab188;color:#fff}.tab-content>div:last-child{display:none}h1{text-align:center;color:#fff;font-weight:300;margin:0 0 40px}label{color:rgba(255,255,255,.5);transition:all .25s ease;font-size:14px;margin-left:5px}label .req{margin:2px;color:#1ab188}input,select,textarea{font-size:22px;display:block;width:100%;height:100%;padding:5px 10px;background:0 0;background-image:none;border:1px solid #a0b3b0;color:#fff;border-radius:0;transition:border-color .25s ease,box-shadow .25s ease;margin-top:5px}select option{background-color:rgba(19,35,47,.9)}input:focus,select:focus,textarea:focus{outline:0;border-color:#1ab188}textarea{border:2px solid #a0b3b0;resize:vertical}.field-wrap{position:relative;margin-bottom:40px}.top-row:after{content:"";display:table;clear:both}.top-row>div{float:left;width:48%;margin-right:4%}.top-row>div:last-child{margin:0}.button,.useLocal{border:0;outline:0;border-radius:0;padding:15px 0;font-size:2rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;background:#1ab188;color:#fff;transition:all .5s ease;cursor:pointer}.button:focus,.button:hover,.useLocal:hover{background:#179b77}.useLocal{font-size:inherit;padding:5px;display:block;text-align:center;margin:0;margin-top:0;margin-top:5px}.button-block{display:block;width:100%}.forgot{margin-top:-20px;text-align:right}.box_item_ads_popup{position:fixed;z-index:999;left:0;margin:0 auto;text-align:center;right:0}.box_item_ads_popup img{max-width:350px;max-height:350px}.box_item_ads_popup .close-button{width:30%;margin:auto;padding:6px 10px;background:red;font-size:11px;color:#fff}.box_item_ads_popup{display:flex;justify-content:center;align-items:center;background:0 0;height:100%;width:460px;height:100%;opacity:0;transition:opacity .3s ease-in}.logo-custom{position:absolute;z-index:999;max-width:130px;right:0;padding:10px;color:red}.logo-custom img{width:100%;height:auto}.logo-custom svg{width:auto;max-height:30px}@media only screen and (max-width:980px){.box_item_ads_popup img{max-width:300px;max-height:250px}.box_item_ads_popup{width:450px}}@media only screen and (max-width:480px){.box_item_ads_popup img{max-width:280px;max-height:170px}.box_item_ads_popup{width:335px}}@media only screen and (max-width:425px){.box_item_ads_popup img{max-width:250px;max-height:140px}.box_item_ads_popup{width:335px}}@media only screen and (max-width:320px){.box_item_ads_popup img{max-width:210px;max-height:120px}.box_item_ads_popup{width:335px}}
     /*]]>*/</style>
-    <div id='createIframe'>
-      <div class='form'>
-        <ul class='tab-group'>
-          <li class='tab active'><a href='#signup'>Create</a></li>
-          <li class='tab'><a href='#login'>Code</a></li>
-        </ul>
-        <div class='tab-content'>
-          <div id='signup'>
-            <h1>Create Player</h1>
-            <form>
-              <div class='top-row'>
-                <div class='field-wrap'>
-                  <label>Player<span class='req'>*</span></label>
-                  <select name='player' required='required'>
-                    <option value=''>Select Player</option>
-                    <option value='fluidplayer'>Fluid Player</option>
-                    <option value='jwpl'>JWPlayer</option>
-                    <option value='plyr'>Plyr.io</option>
-                    <option value='video'>Video</option>
-                  </select>
+    <b:if cond='data:view.url == data:view.url path "/p/create-stream.html"'>
+      <div id='createIframe'>
+        <div class='form'>
+          <ul class='tab-group'>
+            <li class='tab active'><a href='#signup'>Create</a></li>
+            <li class='tab'><a href='#login'>Code</a></li>
+          </ul>
+          <div class='tab-content'>
+            <div id='signup'>
+              <h1>Create Player</h1>
+              <form>
+                <div class='top-row'>
+                  <div class='field-wrap'>
+                    <label>Player<span class='req'>*</span></label>
+                    <select name='player' required='required'>
+                      <option value=''>Select Player</option>
+                      <option value='fluidplayer'>Fluid Player</option>
+                      <option value='jwpl'>JWPlayer</option>
+                      <option value='plyr'>Plyr.io</option>
+                      <option value='video'>Video</option>
+                    </select>
+                  </div>
+                  <div class='field-wrap'>
+                    <label>Provider<span class='req'>*</span></label>
+                    <select disabled='disabled' name='provider' required='required'>
+                      <option value=''>Select Provider</option>
+                      <option value='gdrive'>Google Drive</option>
+                      <option value='rand'>Random</option>
+                      <option value='yt'>Youtube</option>
+                    </select>
+                  </div>
                 </div>
                 <div class='field-wrap'>
-                  <label>Provider<span class='req'>*</span></label>
-                  <select disabled='disabled' name='provider' required='required'>
-                    <option value=''>Select Provider</option>
-                    <option value='gdrive'>Google Drive</option>
-                    <option value='rand'>Random</option>
-                    <option value='yt'>Youtube</option>
-                  </select>
+                  <label>Format Video<span class='req'>*</span></label>
+                  <input name='format' placeholder='disabled' type='text' disabled='disabled' autocomplete='off' />
                 </div>
-              </div>
-              <div class='field-wrap'>
-                <label>Format Video<span class='req'>*</span></label>
-                <input name='format' placeholder='disabled' type='text' disabled='disabled' autocomplete='off' />
-              </div>
-              <div class='field-wrap'>
-                <label>Link Video<span class='req'>*</span>
-                </label>
-                <input class='hidden' id='file' name='file' type='file' accept='video/*' />
-                <input name='link' type='text' placeholder='Link Video' disabled='disabled' required='required' autocomplete='off' />
-                <label style='display: none;' class='useLocal' for='file'>Use Local Video</label>
-              </div>
-              <button type='submit' class='button button-block'>Confirm</button>
-            </form>
-          </div>
-          <div id='login'>
-            <h1>Your Code here</h1>
-            <div class='field-wrap'>
-              <label>Iframe Code<span class='req'>*</span></label>
-              <textarea id='ifcode' type='text'></textarea>
+                <div class='field-wrap'>
+                  <label>Link Video<span class='req'>*</span>
+                  </label>
+                  <input class='hidden' id='file' name='file' type='file' accept='video/*' />
+                  <input name='link' type='text' placeholder='Link Video' disabled='disabled' required='required' autocomplete='off' />
+                  <label style='display: none;' class='useLocal' for='file'>Use Local Video</label>
+                </div>
+                <button type='submit' class='button button-block'>Confirm</button>
+              </form>
             </div>
-            <div class='field-wrap'>
-              <label>Link<span class='req'>*</span></label>
-              <textarea id='links' type='text'></textarea>
+            <div id='login'>
+              <h1>Your Code here</h1>
+              <div class='field-wrap'>
+                <label>Iframe Code<span class='req'>*</span></label>
+                <textarea id='ifcode' type='text'></textarea>
+              </div>
+              <div class='field-wrap'>
+                <label>Link<span class='req'>*</span></label>
+                <textarea id='links' type='text'></textarea>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </b:if>
     <script>/*<![CDATA[*/
       const config = {
         gDriveApikey: "gdrive_api_key",
@@ -90,6 +92,7 @@
     /*]]>*/</script>
     <!--End Stream Files-->
     <b:else/>
+    <!--Main Template-->
     <b:section id='post-body'>
       <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
         <b:widget-settings>
@@ -118,9 +121,7 @@
           <b:widget-setting name='showInlineAds'>false</b:widget-setting>
           <b:widget-setting name='showReactions'>false</b:widget-setting>
         </b:widget-settings>
-        <b:includable id='main' var='this'>
-          <h2>Hello World</h2>
-        </b:includable>
+        <b:includable id='main' var='this'/>
         <b:includable id='imageList' var='post' />
         <b:includable id='shareButton' var='post' />
         <b:includable id='aboutPostAuthor' />
@@ -190,6 +191,7 @@
         <b:includable id='threadedComments' var='post' />
       </b:widget>
     </b:section>
+    <!--End Main Template-->
   </b:if>
 </body>
 
